@@ -1,0 +1,201 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        .vizyon
+        {
+            width: 181px;
+        }
+        .not
+        {
+            width: 183px;
+        }
+        .degisim
+        {
+            height: 401px;
+            width: 677px;
+        }
+        .logo
+        {
+            width: 952px;
+        }
+        .style4
+        {
+            height: 145px;
+        }
+        .style6
+        {
+            width: 225px;
+            height: 93px;
+        }
+        .style7
+        {
+            width: 758px;
+            height: 93px;
+        }
+        .style8
+        {
+            width: 225px;
+            height: 5px;
+        }
+        .style9
+        {
+            width: 758px;
+            height: 5px;
+        }
+        .style10
+        {
+            width: 100%;
+            height: 1045px;
+        }
+        .style11
+        {
+            width: 83%;
+            height: 204px;
+        }
+        .style13
+        {
+            width: 82px;
+            height: 96px;
+        }
+        .style15
+        {
+            width: 93px;
+            height: 77px;
+        }
+        .style16
+        {
+            height: 77px;
+        }
+    </style>
+</head>
+<body bgcolor="#ffffff">
+    <form runat="server">
+    <div class="page" style="height:auto">
+        <table class="style10">
+            <tr>
+                <td colspan="2" class="style4">
+                <div class="logo">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/resimler/ögrenci logo.jpg" 
+                        Width="954px" /></div>
+                </td>
+            </tr>
+            <tr>
+                <td class="style8">
+               <fieldset>
+               <legend><b>Bölüm Bilgileri</b></legend>
+                    <div class="vizyon">
+                        <asp:ImageButton ID="ImageButton1" runat="server" 
+                            ImageUrl="~/resimler/amacButton.jpg" PostBackUrl="~/Amac.aspx"  />
+                        <br />
+                        <asp:ImageButton ID="ImageButton2" runat="server" 
+                            ImageUrl="~/resimler/kosulButton.jpg" PostBackUrl="~/kabul.aspx"  />
+                        <br />
+                        <asp:ImageButton ID="ImageButton3" runat="server" 
+                            ImageUrl="~/resimler/yeterlilikButton.jpg" PostBackUrl="~/yeter.aspx" />
+                    </div>
+                    </fieldset>
+                </td>
+                <td class="style9">
+                    <div style="width: 274px; height: 250px; margin-left: 128px;">
+                        &nbsp;<table bgcolor="#339966" class="style11">
+                            <tr>
+                                <td class="style15">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Label ID="LblNumara" runat="server" Font-Size="Medium" ForeColor="White" 
+                                        Text="Label"></asp:Label>
+                                </td>
+                                <td class="style16">
+                                    <img alt="" class="style13" src="resimler/UFF.png" /><asp:Image ID="Image2" 
+                                        runat="server" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LblAd" runat="server" Font-Size="Medium" ForeColor="White" 
+                                        Text="Label"></asp:Label>
+&nbsp;
+                                    <asp:Label ID="LblSoyad" runat="server" Font-Size="Medium" ForeColor="White" 
+                                        Text="Label"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Label ID="LblFakulte" runat="server" Font-Size="Medium" ForeColor="White" 
+                                        Text="Label"></asp:Label>
+&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <asp:Label ID="LblBolum" runat="server" Font-Size="Medium" ForeColor="White" 
+                                        Text="Label"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+&nbsp;
+                    </div>
+    </td>
+            </tr>
+            <tr>
+            <div class="not">
+                <td class="style6">
+                <fieldset>
+                <legend><b>Öğrenci İşleri</b></legend>
+                    <asp:ImageButton ID="ImageBtnOgrenciAnaSayfa" runat="server" Height="36px" 
+                        ImageUrl="~/resimler/ogrenciAnasayfa.jpg" PostBackUrl="~/AnaSayfa.aspx" 
+                        style="margin-left: 1px" Width="180px" />
+                    <br />
+                    <asp:ImageButton ID="BtnYariyilNot" runat="server" Height="36px" 
+                        ImageUrl="~/resimler/YarıyılNot.jpg" PostBackUrl="~/YariyilNot.aspx" 
+                        Width="181px" />
+                    <br />
+                    <asp:ImageButton ID="BtnGenelNot" runat="server" Height="36px" 
+                        ImageUrl="~/resimler/GenelNot.jpg" Width="180px" 
+                        PostBackUrl="~/GenelNotDurumu.aspx" />
+                    <br />
+                    <asp:ImageButton ID="BtnSinavProgrami" runat="server" Height="36px" 
+                        ImageUrl="~/resimler/SınavPro.jpg" PostBackUrl="~/SistemeGiris.aspx" 
+                        Width="181px" />
+                    <br />
+                    <asp:ImageButton ID="BtnDersListesi" runat="server" Height="36px" 
+                        ImageUrl="~/resimler/DersListesi.jpg" Width="181px" 
+                        PostBackUrl="~/DersListesi.aspx" />
+                    <br />
+                    <asp:ImageButton ID="BtnDanismanBilgileri" runat="server" Height="36px" 
+                        ImageUrl="~/resimler/Danışman.jpg" Width="180px" 
+                        PostBackUrl="~/DanismanBilgileri.aspx" />
+                    <br />
+                    <asp:ImageButton ID="BtnOgrenciBilgileri" runat="server" Height="36px" 
+                        ImageUrl="~/resimler/Bilgiler.jpg" Width="180px" 
+                        PostBackUrl="~/OgrenciBilgileri.aspx" />
+                    <br />
+                    <asp:ImageButton ID="BtnSifreDegis" runat="server" Height="36px" 
+                        ImageUrl="~/resimler/ŞifreDeğiş.jpg" Width="181px" 
+                        PostBackUrl="~/SifreDegistir.aspx" />
+                    </fieldset>
+                </td>
+                    </div>
+                <td class="style7" style="top: 0px; left: 0px"><div class="degisim" align="left" > <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    değişim iyidir</asp:ContentPlaceHolder></div>
+                    </td>
+            </tr>
+
+            <tr>
+            <td>
+            <div style="width: 185px"><br />
+            </div>
+            </td>
+            </tr>
+        </table>
+   
+    </div>
+    </form>
+</body>
+</html>
